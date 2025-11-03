@@ -12,7 +12,9 @@ Na **fase 2** do projeto, foi desenvolvido um ambiente de simulação no **Wokwi
 Esse sistema analisa os níveis de **potássio (K)**, **nitrogênio (N)**, **fósforo (P)** e **umidade** em uma plantação.
 
 Com base nas leituras dos sensores, o sistema foi programado para acionar automaticamente a irrigação sempre que determinados parâmetros estivessem abaixo dos limites adequados.
-Embora simplificado, o modelo serve como demonstração do comportamento automatizado em condições controladas.
+Embora simplificado, o modelo serve como demonstração do comportamento automatizado em condições controladas. 
+
+Como não foram coletados dados reais nesta etapa, buscou-se referências em fontes públicas de dados agrícolas brasileiras para gerar um banco de dados sintético, com valores coerentes com condições típicas de solos cultivados no país.
 
 ---
 
@@ -43,9 +45,25 @@ Os valores foram gerados dentro de faixas plausíveis para solos agrícolas bras
 
 ## 🧮 Manipulação e Análise de Dados
 
+### Extração dos dados e criação do banco no Oracle
+
+Os valores foram gerados dentro de faixas plausíveis para solos agrícolas brasileiros, considerando referências técnicas e publicações nacionais sobre as culturas selecionadas.
+
+Foram incluídas variações sazonais simuladas para refletir o comportamento esperado ao longo do ano — como aumento da umidade em períodos chuvosos e diluição de nutrientes — além de eventos de correção nutricional que impactam temporariamente os níveis de N, P e K. Abaixo segue print de tela demonstrando a importação da planilha em Excel denominada sensor_solo.csv.
+
+![Importação da Base](Imagens/Imagem1.png)
+
+Os prints a seguir demonstram o banco de dados criado, denominado SENSORES_NPK_PH_UMIDADE, bem como a sua visualização por meio do comando SELECT * FROM sensores_npk_ph_umidade. É importante observar que a variável TIPO_CORRECAO apresenta alguns valores ausentes, uma vez que as correções de nutrientes são eventos esporádicos e não correm em todas as semanas do período analisado.
+
+![Banco de Dados](Imagens/Imagem2.png)
+
+![Vizualização da Base de dados](Imagens/Imagem3.png)
+
 ### 🔍 Filtragem de Dados
 
 Foram aplicados filtros para selecionar a cultura **Soja** no período de **01/01/2024 a 30/03/2024**, permitindo uma observação detalhada do comportamento de pH, umidade e nutrientes.
+
+![Flitro por período](Imagens/Imagem4.png)
 
 ### 📈 Agregação e Estatísticas Descritivas
 
@@ -56,6 +74,8 @@ Foi realizada uma agregação por cultura para calcular as médias de pH, umidad
 * **Cana-de-açúcar:** maiores médias de N e K (alta demanda nutricional)
 * **Soja:** valores equilibrados e irrigação moderada
 * **Laranja:** maior média de irrigação, devido à sensibilidade hídrica
+
+![Agregação e Estatística Descritiva](Imagens/Imagem5.png)
 
 ---
 
@@ -71,6 +91,8 @@ Correlação linear fraca e negativa entre horas de irrigação e umidade:
 
 Esses resultados sugerem a influência de fatores externos (chuvas, evapotranspiração, drenagem).
 
+![Correlações](Imagens/Imagem6.png)
+
 ### 🌾 Irrigação x Nutrientes
 
 Análise de correlação de **Pearson** entre irrigação e nutrientes (N, P, K):
@@ -80,6 +102,8 @@ Análise de correlação de **Pearson** entre irrigação e nutrientes (N, P, K)
 | Laranja        | Correlação positiva moderada  | Irrigação ajuda a manter nutrientes |
 | Soja           | Correlação levemente negativa | Diluição temporária dos nutrientes  |
 | Cana-de-açúcar | Correlação equilibrada        | Retenção prolongada de nutrientes   |
+
+![Correlação Pearson](Imagens/Imagem7.png)
 
 ---
 

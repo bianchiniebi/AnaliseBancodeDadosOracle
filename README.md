@@ -73,7 +73,7 @@ Foi realizada uma agregação por cultura para calcular as médias de pH, umidad
 
 * **Cana-de-açúcar:** maiores médias de N e K, que sinaliza que a cultura exige mais nutrientes em comparação com as demais.
 * **Soja:** valores equilibrados e irrigação moderada.
-* **Laranja:** apresenta valores de irrigação elevandos em relação a soja mas com unidade próxima, o que indica que a região sofreu aprensetou pouca chuva.
+* **Laranja:** apresenta valores de irrigação elevandos em relação a soja mas com unidade próxima, o que indica pouca chuva.
 
 ![Agregação e Estatística Descritiva](Imagem5.png)
 

@@ -71,9 +71,9 @@ Foi realizada uma agregação por cultura para calcular as médias de pH, umidad
 
 **Resultados:**
 
-* **Cana-de-açúcar:** maiores médias de N e K (alta demanda nutricional)
-* **Soja:** valores equilibrados e irrigação moderada
-* **Laranja:** maior média de irrigação, devido à sensibilidade hídrica
+* **Cana-de-açúcar:** maiores médias de N e K, que sinaliza que a cultura exige mais nutrientes em comparação com as demais.
+* **Soja:** valores equilibrados e irrigação moderada.
+* **Laranja:** apresenta valores de irrigação elevandos em relação a soja e umidade não elevada o que indica um região de poucas chuvas.
 
 ![Agregação e Estatística Descritiva](Imagem5.png)
 
@@ -83,13 +83,10 @@ Foi realizada uma agregação por cultura para calcular as médias de pH, umidad
 
 ### 💧 Irrigação x Umidade
 
-Correlação linear fraca e negativa entre horas de irrigação e umidade:
+A análise da correlação entre as horas de irrigação (irrigacao_horas) e o percentual de umidade do solo (unidade_pct) revelou uma relação linear consistentemente fraca e negativa para todas as culturas examinadas (Cana-de-açúcar: -0,146; Soja: -0,109; Laranja: -0,042).
 
-* Cana-de-açúcar: -0,146
-* Soja: -0,109
-* Laranja: -0,042
+Os coeficientes, por estarem próximos de zero, indicam que o tempo de irrigação, isoladamente, demonstra ter influência linear muito limitada sobre a variação da umidade registrada. O sinal negativo, embora fraco, sugere que, à medida que as horas de irrigação aumentam, o percentual de umidade apresenta uma ligeira tendência de queda, o que é um resultado contraintuitivo e que requer investigação adicional. Sugere-se a avaliação de fatores externos (chuva, evapotranspiração, drenagem) e a consideração de um atraso temporal entre a irrigação e a medição da umidade para uma compreensão mais precisa da dinâmica hídrica.
 
-Esses resultados sugerem a influência de fatores externos (chuvas, evapotranspiração, drenagem).
 
 ![Correlações](Imagem6.png)
 

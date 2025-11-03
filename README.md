@@ -51,19 +51,19 @@ Os valores foram gerados dentro de faixas plausíveis para solos agrícolas bras
 
 Foram incluídas variações sazonais simuladas para refletir o comportamento esperado ao longo do ano — como aumento da umidade em períodos chuvosos e diluição de nutrientes — além de eventos de correção nutricional que impactam temporariamente os níveis de N, P e K. Abaixo segue print de tela demonstrando a importação da planilha em Excel denominada sensor_solo.csv.
 
-![Importação da Base](Imagens/Imagem1.png)
+![Importação da Base](Imagem1.png)
 
 Os prints a seguir demonstram o banco de dados criado, denominado SENSORES_NPK_PH_UMIDADE, bem como a sua visualização por meio do comando SELECT * FROM sensores_npk_ph_umidade. É importante observar que a variável TIPO_CORRECAO apresenta alguns valores ausentes, uma vez que as correções de nutrientes são eventos esporádicos e não correm em todas as semanas do período analisado.
 
-![Banco de Dados](Imagens/Imagem2.png)
+![Banco de Dados](Imagem2.png)
 
-![Vizualização da Base de dados](Imagens/Imagem3.png)
+![Vizualização da Base de dados](Imagem3.png)
 
 ### 🔍 Filtragem de Dados
 
 Foram aplicados filtros para selecionar a cultura **Soja** no período de **01/01/2024 a 30/03/2024**, permitindo uma observação detalhada do comportamento de pH, umidade e nutrientes.
 
-![Flitro por período](Imagens/Imagem4.png)
+![Flitro por período](Imagem4.png)
 
 ### 📈 Agregação e Estatísticas Descritivas
 
@@ -75,7 +75,7 @@ Foi realizada uma agregação por cultura para calcular as médias de pH, umidad
 * **Soja:** valores equilibrados e irrigação moderada
 * **Laranja:** maior média de irrigação, devido à sensibilidade hídrica
 
-![Agregação e Estatística Descritiva](Imagens/Imagem5.png)
+![Agregação e Estatística Descritiva](Imagem5.png)
 
 ---
 
@@ -91,7 +91,7 @@ Correlação linear fraca e negativa entre horas de irrigação e umidade:
 
 Esses resultados sugerem a influência de fatores externos (chuvas, evapotranspiração, drenagem).
 
-![Correlações](Imagens/Imagem6.png)
+![Correlações](Imagem6.png)
 
 ### 🌾 Irrigação x Nutrientes
 
@@ -103,7 +103,7 @@ Análise de correlação de **Pearson** entre irrigação e nutrientes (N, P, K)
 | Soja           | Correlação levemente negativa | Diluição temporária dos nutrientes  |
 | Cana-de-açúcar | Correlação equilibrada        | Retenção prolongada de nutrientes   |
 
-![Correlação Pearson](Imagens/Imagem7.png)
+![Correlação Pearson](Imagem7.png)
 
 ---
 
